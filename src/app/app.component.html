@@ -1,7 +1,9 @@
 <div class="container">
   <img class="bg" [src]="background" />
   <div class="search-container">
-    <label>{{ searchTerm ? searchTerm : 'Type something' }}</label>
-    <input (keyup)="onSearchTermChanged($event)" />
+    <label>{{
+      searchTerm ? 'You are searching for ' + searchTerm : 'Type something'
+    }}</label>
+    <input class="input" (keyup)="onSearchTermChanged($event)" />
   </div>
 </div>

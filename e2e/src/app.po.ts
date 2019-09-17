@@ -6,6 +6,14 @@ export class AppPage {
   }
 
   getTitleText() {
-    return element(by.css('app-root .content span')).getText() as Promise<string>;
+    return element(by.css('.search-container label')).getText() as Promise<string>;
+  }
+
+  getImageSrc() {
+    return element(by.css('.container img')).getAttribute('src') as Promise<string>;
+  }
+
+  getInput() {
+    return element(by.css('.search-container input'));
   }
 }
